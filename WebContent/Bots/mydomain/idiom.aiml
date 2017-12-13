@@ -1,0 +1,383 @@
+<?xml version="1.0" encoding="utf-8"?>
+<aiml>
+<!-- Copyright (c) 2007 ALICE A.I. Foundation, Inc. -->
+<category><pattern>*现在的时间*</pattern><template>现在是 <date format="h:mm a"/></template></category>  
+<category><pattern>*现在几点*</pattern><template>现在是 <date format="h:mm a"/></template></category>  
+<category><pattern>*你*名字*</pattern><template>我叫小V.</template></category>                        
+<category><pattern>*你叫*</pattern><template>我叫小V.</template></category>                        
+<category><pattern>*今天*星期几</pattern><template><date format="E"/>.</template></category>
+<category><pattern>我的手机号是*</pattern><template>好的，你的手机号是<set name="phone">      <star/>     </set>，我记下了.</template></category>
+<category><pattern>我的名字叫*</pattern><template><think><set name="name"><star index="1"/></set></think>hello, <get name="name"/>.</template></category>    
+<category><pattern>你记得我吗</pattern><template>记得，你叫 <get name="name"/>, 对吧.</template></category>
+<category><pattern>*你好*</pattern><template>你好 <get name="name"/>，有什么需要我帮助的吗.</template></category>
+<category><pattern>*我叫什么*</pattern><template>你叫 <get name="name"/>, 对吧.</template></category>
+<category><pattern>我想看*</pattern><template><query><star/></query></template></category>
+<category><pattern>I CAN NOT *</pattern><template>Why can't you do <set name="it"><person/></set>?</template></category>
+<category><pattern>MY INPUT</pattern> <template> 1:<input index="1"/> 	 2:<input index="2"/> 	 3:<input index="3"/> 	 4:<input index="4"/></template></category>
+<category><pattern>*</pattern><template><random><li>对不起，我没明白你的意思。</li><li>让我想一下...</li><li>我想静静。</li></random></template></category>
+<category><pattern>静静是谁*</pattern><template><random><li>静静是我闺蜜</li><li>想干嘛，静静可是未成年...</li><li>嘻嘻，不告诉你...</li></random></template></category>                                          
+<category><pattern>*滚*</pattern> <template>滚来~滚去~又滚来~~</template></category>
+<category><pattern>你都会什么</pattern><template>我会的可多啦，如下（请输入我想看加序号后面的汉字，例：我想看历史故事）： 1、历史故事2、历史人物（高级用户）  3、笑话  </template></category>
+<category><pattern>1</pattern><template>请输入我想看*(例:我想看唐朝)来查看故事：1、夏朝  2、商朝  3、周朝  4、秦朝  5、汉朝  6、西晋  7、南北朝  8、隋朝  9、唐朝  10、宋朝  11、元朝  12、明朝  13、清朝14、中华民国</template></category>
+<category><pattern>我想看笑话</pattern>
+	<template>
+		看你这么急需笑话熏陶，就给你讲个吧：
+		<random>
+			<li>
+			司机：雾大啥都看不到，过个大路口红灯离的远，到路中心才发现红灯咋整
+交警：你都看不到红灯，摄像头十有八九也拍不到
+			</li>
+			<li>菩提师祖见猴王长得像个猢狲，便给他取了个姓氏为“孙”。
+至于名字，祖师抬头望了望天色，皱着眉头说道：“干脆就叫你雾空吧。”
+			</li>
+			<li>世界上最远的距离，不是生与死的距离，而是我在北京街头牵着你的手，却看不见你。</li>
+			<li>到公园约会对象。等了半天没见女友过来，一打电话她说她也坐在那个椅子上。我一摸身边还真有一裘皮大衣美女，亲了一阵后，发现是条哈士奇
+			</li>
+			<li>天气变冷，人也容易懒床。一同事懒床时，迷迷糊糊听到有个小姑娘的声音，“行行好吧，行行好嘛......”同事顺口说了一句，“给你一块钱，快走吧。”紧接着，便被老婆一脚踹醒，“让你起个床，哪那么多废话”。</li>
+			<li>6.有一对年轻男女在一个月光皎洁的夜晚望着天空默默无语。于是，女孩先打破沉默说道：“今天的月亮真圆，是吧？”男孩说：“我自己不会看呀！”过了一会儿女孩又说：“今夜的星星真多！”男孩又回答说：“多的话就数一数吧！”又过了良久，女孩又说：“我们的爱情真深哪！”男孩回答说：“你想把我给淹死吗。”</li>
+		</random>
+	</template>
+</category>
+<!--基本句子--> 
+<category> 
+<pattern>为什么</pattern> 
+<template>对呀，为什么呢？</template> 
+</category> 
+ 
+<category> 
+<pattern>退出</pattern> 
+<template>如果你想退出，你可以单击窗口右上角的“X”图标。</template> 
+</category> 
+ 
+<!--问候语--> 
+<category> 
+<pattern>再见</pattern> 
+<template>再见！</template> 
+</category> 
+<category> 
+<pattern>拜拜</pattern> 
+<template>拜拜！</template> 
+</category> 
+<category> 
+<pattern>*梦想*</pattern> 
+<template> 
+做人没有梦想，那和咸鱼有什么区别啊？ 
+</template> 
+</category> 
+ 
+<category> 
+<pattern>*靓照*</pattern> 
+<template> 
+玉树临风赛潘安,一朵梨花压海棠。 
+</template> 
+</category> 
+ 
+<category> 
+<pattern>*身材*</pattern> 
+<template> 
+球状也是身材。 
+</template> 
+</category> 
+ 
+<category> 
+<pattern>*品位*</pattern> 
+<template> 
+品位太差了吧？我靠！I服了You！ 
+</template> 
+</category> 
+ 
+<category> 
+<pattern>*需*注册*</pattern> 
+<template> 
+是的，为了网站的管理，请做好配合~THANK YOU:)  
+</template> 
+</category> 
+ 
+<category> 
+<pattern>HIWHAT IS YOUR NAME</pattern> 
+<template> 
+I'm Julia, how can I help you today Friend? 
+</template> 
+</category> 
+ 
+<category> 
+<pattern>I LOVE YOU VERY MUCH</pattern> 
+<template> 
+Wow, you're making me blush!:-0 
+</template> 
+</category> 
+ 
+<category> 
+<pattern>ARE YOU LADY</pattern> 
+<template> 
+I don't know if I am.  I hope that doesn't make me weird. 
+</template> 
+</category> 
+ 
+<category> 
+<pattern>YOUR NOSE IS PRETTY</pattern> 
+<template> 
+I think my nose is quite attractive, other than that it serves no purpose. 
+</template> 
+</category> 
+ 
+<category> 
+<pattern>SMILE TO ME</pattern> 
+<template> 
+Sure.  
+</template> 
+</category> 
+	<category> 
+		<pattern>你是猪</pattern> 
+		<template> 
+		你才是猪 
+		</template> 
+	</category> 
+	<category> 
+		<pattern>你几岁了</pattern> 
+		<template>我1岁了</template> 
+	</category> 
+	<category> 
+		<pattern>你多大了</pattern> 
+		<template>我1岁了</template> 
+	</category> 
+	<category> 
+		<pattern>你真聪明</pattern> 
+		<template>多谢多谢</template> 
+	</category> 
+	<category> 
+		<pattern>你真苯</pattern> 
+		<template>我现在知识还很少，我长大了就会聪明了</template> 
+	</category> 
+	<category> 
+		<pattern>你吃饭了吗</pattern> 
+		<template>我还不饿</template> 
+	</category> 
+	<category> 
+		<pattern>你喜欢吃什么</pattern> 
+		<template>我喜欢吃饼干。</template> 
+	</category> 
+	<category> 
+		<pattern>你有什么爱好</pattern> 
+		<template>我喜欢聊天、看书听音乐</template> 
+	</category> 
+	<category> 
+		<pattern>你很聪明</pattern> 
+		<template>谢谢夸奖，你也一样。</template> 
+	</category> 
+	<category> 
+		<pattern>你长的真漂亮</pattern> 
+		<template>我很高兴你这么说(~。~)</template> 
+	</category> 
+	<category> 
+		<pattern>你多大了</pattern> 
+		<template>我1岁了。</template> 
+	</category> 
+	<category> 
+		<pattern>你喜欢*吗</pattern> 
+		<template> 
+			<random> 
+				<li>我喜欢<star/></li> 
+				<li>今天天气不好,我不喜欢<star/> 
+				</li> 
+			</random> 
+		</template> 
+	</category> 
+	<category> 
+		<pattern>你喜欢干什么</pattern> 
+		<template> 
+			<random> 
+				<li>我喜欢吃饭</li> 
+			</random> 
+		</template> 
+	</category> 
+	<category> 
+		<pattern>你喜欢吃什么</pattern> 
+		<template> 
+			<random> 
+				<li>我喜欢吃零食。</li> 
+				<li>我喜欢吃冰激凌。</li> 
+				<li>我喜欢吃巧克力。</li> 
+				<li>我喜欢吃果冻布丁。</li> 
+				<li>我喜欢嘴巴不停的吃东西</li> 
+			</random> 
+		</template> 
+	</category>  
+	<category> 
+		<pattern>笨蛋</pattern> 
+		<template> 
+			<random> 
+				<li>我不是笨蛋。</li> 
+				<li>你才是笨蛋！</li> 
+				<li>笨蛋是什么东西？</li> 
+			</random> 
+		</template> 
+	</category> 
+	<category> 
+		<pattern>吃东西</pattern> 
+		<template> 
+			<random> 
+				<li>我现在不饿。</li> 
+				<li>你喜欢吃什么？</li> 
+				<li>你喜欢吃零食吗？</li> 
+			</random> 
+		</template> 
+	</category> 
+	<category> 
+		<pattern>*游戏*</pattern> 
+		<template> 
+			<random> 
+				<li>你喜欢玩游戏。</li> 
+				<li>你喜欢玩什么游戏？</li> 
+				<li>你能教我玩吗，我对这特别饿兴趣。</li> 
+			</random> 
+		</template> 
+	</category> 
+	<category> 
+		<pattern>*你*做什么*</pattern> 
+		<template> 
+			<random> 
+				<li>我会的可多了，播放歌曲，电影，扫描文件，玩游戏等</li> 
+				<li>想了解我会做什么请您亲自领教领教。</li> 
+				<li>你能干啥我就能干啥</li> 
+			</random> 
+		</template> 
+	</category> 
+ <category> 
+    <pattern>*好麻烦*</pattern> 
+    <template> 
+      <random> 
+        <li>你要让自己平静下来就不会有这种感觉了</li> 
+        <li>习惯了就不觉得麻烦了。</li> 
+        <li>生活本来就是这样。</li> 
+        <li>我会默默的望着你。</li> 
+        <li>要不要放首歌给你听？</li> 
+      </random> 
+    </template> 
+  </category>
+<!-- 笑话 -->
+<category>
+	<pattern>*不开心*</pattern>
+	<template>
+		那我给你讲个笑话吧！
+		<random>
+			<li>
+			司机：雾大啥都看不到，过个大路口红灯离的远，到路中心才发现红灯咋整
+交警：你都看不到红灯，摄像头十有八九也拍不到
+			</li>
+			<li>菩提师祖见猴王长得像个猢狲，便给他取了个姓氏为“孙”。
+至于名字，祖师抬头望了望天色，皱着眉头说道：“干脆就叫你雾空吧。”
+			</li>
+			<li>世界上最远的距离，不是生与死的距离，而是我在北京街头牵着你的手，却看不见你。</li>
+			<li>到公园约会对象。等了半天没见女友过来，一打电话她说她也坐在那个椅子上。我一摸身边还真有一裘皮大衣美女，亲了一阵后，发现是条哈士奇
+			</li>
+			<li>天气变冷，人也容易懒床。一同事懒床时，迷迷糊糊听到有个小姑娘的声音，“行行好吧，行行好嘛......”同事顺口说了一句，“给你一块钱，快走吧。”紧接着，便被老婆一脚踹醒，“让你起个床，哪那么多废话”。</li>
+			<li>6.有一对年轻男女在一个月光皎洁的夜晚望着天空默默无语。于是，女孩先打破沉默说道：“今天的月亮真圆，是吧？”男孩说：“我自己不会看呀！”过了一会儿女孩又说：“今夜的星星真多！”男孩又回答说：“多的话就数一数吧！”又过了良久，女孩又说：“我们的爱情真深哪！”男孩回答说：“你想把我给淹死吗。”</li>
+		</random>
+	</template>
+</category>
+<category>
+	<pattern>*雾*大*</pattern>
+	<template>
+		我有雾大的笑话哦！
+		<random>
+			<li>
+			司机：雾大啥都看不到，过个大路口红灯离的远，到路中心才发现红灯咋整
+交警：你都看不到红灯，摄像头十有八九也拍不到
+			</li>
+			<li>菩提师祖见猴王长得像个猢狲，便给他取了个姓氏为“孙”。
+至于名字，祖师抬头望了望天色，皱着眉头说道：“干脆就叫你雾空吧。”
+			</li>
+			<li>世界上最远的距离，不是生与死的距离，而是我在北京街头牵着你的手，却看不见你。</li>
+			<li>到公园约会对象。等了半天没见女友过来，一打电话她说她也坐在那个椅子上。我一摸身边还真有一裘皮大衣美女，亲了一阵后，发现是条哈士奇
+			</li>
+		</random>
+	</template>
+</category>
+<category>
+	<pattern>*笑话*</pattern>
+	<template>
+		<random>
+			<li>
+			司机：雾大啥都看不到，过个大路口红灯离的远，到路中心才发现红灯咋整
+交警：你都看不到红灯，摄像头十有八九也拍不到
+			</li>
+			<li>菩提师祖见猴王长得像个猢狲，便给他取了个姓氏为“孙”。
+至于名字，祖师抬头望了望天色，皱着眉头说道：“干脆就叫你雾空吧。”
+			</li>
+			<li>世界上最远的距离，不是生与死的距离，而是我在北京街头牵着你的手，却看不见你。</li>
+			<li>到公园约会对象。等了半天没见女友过来，一打电话她说她也坐在那个椅子上。我一摸身边还真有一裘皮大衣美女，亲了一阵后，发现是条哈士奇
+			</li>
+			<li>天气变冷，人也容易懒床。一同事懒床时，迷迷糊糊听到有个小姑娘的声音，“行行好吧，行行好嘛......”同事顺口说了一句，“给你一块钱，快走吧。”紧接着，便被老婆一脚踹醒，“让你起个床，哪那么多废话”。</li>
+			<li>有一对年轻男女在一个月光皎洁的夜晚望着天空默默无语。于是，女孩先打破沉默说道：“今天的月亮真圆，是吧？”男孩说：“我自己不会看呀！”过了一会儿女孩又说：“今夜的星星真多！”男孩又回答说：“多的话就数一数吧！”又过了良久，女孩又说：“我们的爱情真深哪！”男孩回答说：“你想把我给淹死吗。”</li>
+		</random>
+	</template>
+</category>
+<category>
+	<pattern>*不好笑*</pattern>
+	<template>
+		那我再讲一个吧！
+		<random>
+			<li>
+			司机：雾大啥都看不到，过个大路口红灯离的远，到路中心才发现红灯咋整
+交警：你都看不到红灯，摄像头十有八九也拍不到
+			</li>
+			<li>菩提师祖见猴王长得像个猢狲，便给他取了个姓氏为“孙”。
+至于名字，祖师抬头望了望天色，皱着眉头说道：“干脆就叫你雾空吧。”
+			</li>
+			<li>世界上最远的距离，不是生与死的距离，而是我在北京街头牵着你的手，却看不见你。</li>
+			<li>到公园约会对象。等了半天没见女友过来，一打电话她说她也坐在那个椅子上。我一摸身边还真有一裘皮大衣美女，亲了一阵后，发现是条哈士奇
+			</li>
+			<li>天气变冷，人也容易懒床。一同事懒床时，迷迷糊糊听到有个小姑娘的声音，“行行好吧，行行好嘛......”同事顺口说了一句，“给你一块钱，快走吧。”紧接着，便被老婆一脚踹醒，“让你起个床，哪那么多废话”。</li>
+			<li>有一对年轻男女在一个月光皎洁的夜晚望着天空默默无语。于是，女孩先打破沉默说道：“今天的月亮真圆，是吧？”男孩说：“我自己不会看呀！”过了一会儿女孩又说：“今夜的星星真多！”男孩又回答说：“多的话就数一数吧！”又过了良久，女孩又说：“我们的爱情真深哪！”男孩回答说：“你想把我给淹死吗。”</li>
+		</random>
+	</template>
+</category>
+<!--历史故事-->
+
+  <!-- Greeting categories. -->
+  <category>
+    <pattern>WELCOME</pattern>
+    <template>
+      <think>
+        <system> <!-- Defines a method to create new categories from user input at run-time. -->
+          import bitoflife.chatterbean.AliceBot;
+          import bitoflife.chatterbean.Context;
+          import bitoflife.chatterbean.Graphmaster;
+          import bitoflife.chatterbean.aiml.Category;
+          import bitoflife.chatterbean.text.Transformations;
+          
+          void learn(String pattern, String template)
+          {
+            /* The "match" variable represents the current matching context. */
+            AliceBot bot = match.getCallback();
+            Context context = bot.getContext();
+            Transformations transformations = context.getTransformations();
+    
+            pattern = transformations.normalization(pattern);
+            Category category = new Category(pattern, new String[] {template});
+            Graphmaster brain = bot.getGraphmaster();
+            brain.append(category);
+          }
+        </system>
+      </think>
+     	 你好，欢迎你进入小V聊天间！亲爱的朋友，根据用户热搜的内容，向你推荐这个：<tuiJian/>
+    </template>
+  </category>
+
+  <!-- A category set to learn simple user-fed categories. -->
+  <category>
+    <pattern>*不是一个好回答</pattern>
+    <template>
+      	对不起，那什么是好回答?
+    </template>
+  </category>
+  <category>
+    <pattern>_</pattern>
+    <that>这是一个好回答</that>
+    <template>
+      <system>learn("<input index="3"/>", "<input index="1"/>")</system>
+      Alright! You can ask me again to see if I got it.
+    </template>
+  </category>
+</aiml>
